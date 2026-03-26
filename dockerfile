@@ -5,7 +5,7 @@ COPY . .
 RUN gradle build -x test
 
 # Etapa 2: run
-FROM openjdk:21-jdk-slim
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar app.jar
 
