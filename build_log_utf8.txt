@@ -1,0 +1,38 @@
+﻿
+> Task :compileJava FAILED
+.\gradlew : C:\Users\v87ja\OneDrive\Documents\Pe
+rsonales\Documentos\Proyecto\ClinicaWebSW\backen
+d-clinica-v2\src\main\java\com\clinica\api\modul
+es\pacientes\service\PacienteService.java:157: 
+error: cannot find symbol
+En línea: 1 Carácter: 1
++ .\gradlew compileJava > build_log.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C: 
+   \Users\v87ja\...not find symbol:String) [],  
+   RemoteException
+    + FullyQualifiedErrorId : NativeCommandErro 
+   r
+ 
+        if (personaOpt.isPresent() && personaOpt
+.get().getTipoDocumento().name().equalsIgnoreCas
+e(query.getTipoDocumento())) {
+                                                
+                         ^
+  symbol:   method name()
+  location: class String
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error 
+output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 3s
+1 actionable task: 1 executed
