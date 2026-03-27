@@ -8,6 +8,8 @@ clinica:
   app:
     jwtSecret: bezK64831554425871132148523698741258963214785bezK64831554425871132148523698741258963214785
     jwtExpirationMs: 300000 # 5 minutes in milliseconds
+    cors:
+      allowed-origins: ${ALLOWED_ORIGINS:http://localhost:4200}
 
 ---
 # --- PROFILE: CONSOLA (In-Memory Database) ---
