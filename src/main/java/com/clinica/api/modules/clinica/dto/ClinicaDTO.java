@@ -44,5 +44,18 @@ public class ClinicaDTO {
     @NotBlank(message = "La cédula del representante es obligatoria")
     private String cedulaRepresentante;
 
+    @NotBlank(message = "El primer nombre del representante es obligatorio")
+    private String repPrimerNombre;
+    private String repSegundoNombre;
+    @NotBlank(message = "El primer apellido del representante es obligatorio")
+    private String repPrimerApellido;
+    private String repSegundoApellido;
+    
+    /*@jakarta.validation.constraints.NotNull(message = "La fecha de nacimiento del representante es obligatoria")
+    private java.time.LocalDate repFechaNacimiento;*/
+    
+    private String repEmail;
+    private String repTelefono;
+
     private String codigoAccesoPortal;
 }

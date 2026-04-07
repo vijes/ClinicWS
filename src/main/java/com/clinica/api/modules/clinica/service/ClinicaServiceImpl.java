@@ -43,9 +43,13 @@ public class ClinicaServiceImpl implements ClinicaService {
                     Persona newPersona = Persona.builder()
                             .documento(dto.getCedulaRepresentante())
                             .tipoDocumento("CEDULA")
-                            .primerNombre(dto.getPrimerNombre())
-                            .primerApellido(dto.getPrimerApellido())
-                            .email(dto.getEmail())
+                            .primerNombre(dto.getRepPrimerNombre())
+                            .segundoNombre(dto.getRepSegundoNombre())
+                            .primerApellido(dto.getRepPrimerApellido())
+                            .segundoApellido(dto.getRepSegundoApellido())
+                            //.fechaNacimiento(dto.getRepFechaNacimiento())
+                            .email(dto.getRepEmail())
+                            .telefono(dto.getRepTelefono())
                             .build();
                     return personaRepository.save(newPersona);
                 });
@@ -167,6 +171,13 @@ public class ClinicaServiceImpl implements ClinicaService {
                 .telefonoConvencional(clinica.getTelefonoConvencional())
                 .email(clinica.getEmail())
                 .cedulaRepresentante(clinica.getRepresentante() != null ? clinica.getRepresentante().getDocumento() : null)
+                .repPrimerNombre(clinica.getRepresentante() != null ? clinica.getRepresentante().getPrimerNombre() : null)
+                .repSegundoNombre(clinica.getRepresentante() != null ? clinica.getRepresentante().getSegundoNombre() : null)
+                .repPrimerApellido(clinica.getRepresentante() != null ? clinica.getRepresentante().getPrimerApellido() : null)
+                .repSegundoApellido(clinica.getRepresentante() != null ? clinica.getRepresentante().getSegundoApellido() : null)
+                //.repFechaNacimiento(clinica.getRepresentante() != null ? clinica.getRepresentante().getFechaNacimiento() : null)
+                .repEmail(clinica.getRepresentante() != null ? clinica.getRepresentante().getEmail() : null)
+                .repTelefono(clinica.getRepresentante() != null ? clinica.getRepresentante().getTelefono() : null)
                 .codigoAccesoPortal(clinica.getCodigoAccesoPortal())
                 .build();
     }
