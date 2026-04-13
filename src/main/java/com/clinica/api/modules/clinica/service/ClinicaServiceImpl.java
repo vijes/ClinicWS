@@ -47,7 +47,7 @@ public class ClinicaServiceImpl implements ClinicaService {
                             .segundoNombre(dto.getRepSegundoNombre())
                             .primerApellido(dto.getRepPrimerApellido())
                             .segundoApellido(dto.getRepSegundoApellido())
-                            //.fechaNacimiento(dto.getRepFechaNacimiento())
+                            .fechaNacimiento(dto.getRepFechaNacimiento())
                             .email(dto.getRepEmail())
                             .telefono(dto.getRepTelefono())
                             .build();

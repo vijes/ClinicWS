@@ -18,7 +18,7 @@ public class ClinicaController {
 
     private final ClinicaService clinicaService;
 
-    @PostMapping
+    @PostMapping("/createClinica")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<ClinicaDTO> registerClinica(@Valid @RequestBody ClinicaDTO clinicaDTO) {
         return ResponseEntity.ok(clinicaService.registerClinica(clinicaDTO));

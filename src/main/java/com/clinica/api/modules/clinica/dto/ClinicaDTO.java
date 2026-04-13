@@ -51,8 +51,8 @@ public class ClinicaDTO {
     private String repPrimerApellido;
     private String repSegundoApellido;
     
-    /*@jakarta.validation.constraints.NotNull(message = "La fecha de nacimiento del representante es obligatoria")
-    private java.time.LocalDate repFechaNacimiento;*/
+    @jakarta.validation.constraints.NotNull(message = "La fecha de nacimiento del representante es obligatoria")
+    private java.time.LocalDate repFechaNacimiento;
     
     private String repEmail;
     private String repTelefono;
